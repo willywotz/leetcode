@@ -12,3 +12,4 @@ pub mod s0058_length_of_last_word;
 pub mod s0066_plus_one;
 pub mod s0067_add_binary;
 pub mod s0069_sqrtx;
+pub mod s0070_climbing_stairs;
