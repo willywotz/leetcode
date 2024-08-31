@@ -20,8 +20,22 @@ impl ListNode {
 }
 
 impl Solution {
-    pub fn delete_duplicates(_head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        None
+    pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+        let mut head = head;
+        let mut current = &mut head;
+
+        while let Some(node) = current {
+            while let Some(next_node) = &mut node.next {
+                if node.val == next_node.val {
+                    node.next = next_node.next.take();
+                } else {
+                    break;
+                }
+            }
+            current = &mut node.next;
+        }
+
+        head
     }
 }
 
@@ -46,5 +60,6 @@ mod tests {
     fn test() {
         assert_eq!(create_list(vec![1,2]), Solution::delete_duplicates(create_list(vec![1,1,2])));
         assert_eq!(create_list(vec![1,2,3]), Solution::delete_duplicates(create_list(vec![1,1,2,3,3])));
+        assert_eq!(create_list(vec![1]), Solution::delete_duplicates(create_list(vec![1,1,1])));
     }
 }
