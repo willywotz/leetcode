@@ -3,8 +3,9 @@
 pub struct Solution {}
 
 impl Solution {
-    pub fn remove_element(_nums: &mut Vec<i32>, _val: i32) -> i32 {
-        0
+    pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
+        nums.retain(|&x| x != val);
+        nums.len() as i32
     }
 }
 
@@ -20,6 +21,6 @@ mod tests {
 
         let nums = &mut vec![0,1,2,2,3,0,4,2];
         assert_eq!(5, Solution::remove_element(nums, 2));
-        assert_eq!(&vec![0,1,4,0,3], nums);
+        assert_eq!(&vec![0,1,3,0,4], nums);
     }
 }
