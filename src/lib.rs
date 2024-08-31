@@ -19,6 +19,7 @@ pub mod s0094_binary_tree_inorder_traversal;
 pub mod s0100_same_tree;
 pub mod s0101_symmetric_tree;
 pub mod s0104_maximum_depth_of_binary_tree;
+pub mod s0108_convert_sorted_array_to_binary_search_tree;
 
 use std::rc::Rc;
 use std::cell::RefCell;
