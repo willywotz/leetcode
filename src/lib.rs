@@ -9,3 +9,4 @@ pub mod s0027_remove_element;
 pub mod s0028_find_the_index_of_the_first_occurrence_in_a_string;
 pub mod s0035_search_insert_position;
 pub mod s0058_length_of_last_word;
+pub mod s0066_plus_one;
