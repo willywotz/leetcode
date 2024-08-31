@@ -13,3 +13,4 @@ pub mod s0066_plus_one;
 pub mod s0067_add_binary;
 pub mod s0069_sqrtx;
 pub mod s0070_climbing_stairs;
+pub mod s0083_remove_duplicates_from_sorted_list;
