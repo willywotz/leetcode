@@ -20,6 +20,7 @@ pub mod s0100_same_tree;
 pub mod s0101_symmetric_tree;
 pub mod s0104_maximum_depth_of_binary_tree;
 pub mod s0108_convert_sorted_array_to_binary_search_tree;
+pub mod s0110_balanced_binary_tree;
 
 use std::rc::Rc;
 use std::cell::RefCell;
