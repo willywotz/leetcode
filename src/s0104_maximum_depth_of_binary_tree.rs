@@ -6,8 +6,15 @@ use crate::TreeNode;
 use std::rc::Rc;
 use std::cell::RefCell;
 impl Solution {
-    pub fn max_depth(_root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        0
+    pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+        if let Some(node) = root {
+            let node = node.borrow();
+            let left_depth = Solution::max_depth(node.left.clone());
+            let right_depth = Solution::max_depth(node.right.clone());
+            1 + left_depth.max(right_depth)
+        } else {
+            0
+        }
     }
 }
 
