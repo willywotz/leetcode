@@ -4,7 +4,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn my_sqrt(x: i32) -> i32 {
-        if x == 0 { return 0; }
+        if x == 0 || x == 1 { return x; }
 
         let mut size = x;
         let mut base = 1;
