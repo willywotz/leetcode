@@ -13,10 +13,8 @@ impl Solution {
 
         let mut ret = vec![vec![0; n]; m];
 
-        for i in 0..m {
-            for j in 0..n {
-                ret[i][j] = original[i * n + j];
-            }
+        for i in 0..(m*n) {
+            ret[i/n][i%n] = original[i];
         }
 
         ret
