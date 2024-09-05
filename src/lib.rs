@@ -23,6 +23,7 @@ pub mod s0108_convert_sorted_array_to_binary_search_tree;
 pub mod s0110_balanced_binary_tree;
 
 pub mod s2022_convert_1d_array_into_2d_array;
+pub mod s2028_find_missing_observations;
 
 use std::rc::Rc;
 use std::cell::RefCell;
